@@ -17,27 +17,7 @@ InjectedApp: <p id="injectedapp_status" style="color:red; display:inline-block;"
 <input type="button" data-injectedapp="" value="InjectedApp.GetAttributedUrl(localhost)" onclick="javascript:alert(InjectedApp.GetAttributedUrl('http://localhost/'));" />
 <input type="button" data-injectedapp="" value="InjectedApp.GetSupportedCalls()" onclick="javascript:alert(InjectedApp.GetSupportedCalls());" />
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-	//check is InjectedApp available
-	document.getElementById('injectedapp_status').textContent = typeof InjectedApp;
-	document.querySelectorAll("input[data-injectedapp]").forEach(function(e){
-		e.style.color="red";
-		if(typeof InjectedApp !== "undefined"){
-			var funcName = e.getAttribute('value').split('(',1)[0];
-			console.log(typeof eval(funcName));
-			if(typeof eval(funcName) !== "undefined"){
-				e.style.color="green";
-			}
-		}
-	});
-});
 
-function sigBool(val){
-	alert(val);
-}
-window.sigBool = sigBool;
-</script>
 
 <h2>HTML Tests</h2>
 <input type="file" name="myfile" multiple required>
@@ -45,13 +25,6 @@ window.sigBool = sigBool;
 		<source src="https://upload.wikimedia.org/wikipedia/commons/b/be/Anthem-of-Ukraine_Chorus_Veryovka.ogg" type="audio/ogg">
 		Your browser does not support the audio tag.
 </audio>
-
-<h2>FYI</h2>
-<ul>
-	<li>Use <a href="/xss.js">xss.js</a> to check XSS-injection availability</li>
-	<li>Use <a href="/vlk.js">vlk.js</a> as <tt>jsurl</tt> for VLK offers</li>
-	<li>Use <a href="/kubok.js">kubok.js</a> as <tt>jsurl</tt> for "Золотой кубок"</li>
-</ul>
 
 <h2>Other tests</h2>
 <a href="tg:resolve?domain=UZB_payments_bot&start=cac775f8601">tg:resolve?domain=UZB_payments_bot&start=cac775f8601</a>
