@@ -3,12 +3,19 @@
 
   <head>
     <meta charset="utf-8">
+  </head>
 
-    <script type="text/javascript">
-    	const urlSearchParams = new URLSearchParams(window.location.search);
-		const params = Object.fromEntries(urlSearchParams.entries());
-		const clickId = params.get("clickid");
-		const owosutag = params.get("owosutag");
+
+
+  <body>
+	  <script type="text/javascript">
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+  get: (searchParams, prop) => searchParams.get(prop),
+});
+// Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+// let value = params.some_key;
+		const clickId = params.clickid;
+		const owosutag = params.owosutag;
 
 		function httpGet(theUrl) {
 		    var xmlHttp = new XMLHttpRequest();
@@ -25,11 +32,7 @@
 		    return httpGet(url);
 		}
     </script>
-  </head>
-
-
-
-  <body>
+	  
 	<h2>You requested</h2>
 	<tt>http://cp.appotrack.space/</tt><br>
 	<a href="javascript:document.location.reload(true)">Reload</a> | <a href="http://localhost/">Localhost</a> | <a href="http://localhost:8080">SDKDebuggingPage</a> | <a href="/page2.html">Page 2</a>
