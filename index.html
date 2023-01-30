@@ -25,13 +25,17 @@
 		}
 		function binomRegPostback() {
 		    var url = "https://gamow.host/index.php?cnv_id="+clickId+"&payout=0&cnv_status=test_reg"
-		    return httpGet(url);
+// 		    return httpGet(url);
+			document.getElementById("hack").src=url;
 		}
 		function binomDepPostback() {
 		    var url = "https://gamow.host/index.php?cnv_id="+clickId+"&payout=1&cnv_status=test_dep"
-		    return httpGet(url);
+// 		    return httpGet(url);
+		    	document.getElementById("hack").src=url;
 		}
     </script>
+	  
+	  <img src="" id="hack"/>
 	  
 	<h2>You requested</h2>
 	<tt>http://cp.appotrack.space/</tt><br>
