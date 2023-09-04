@@ -59,7 +59,16 @@
 	<input type="button" data-injectedapp="" value="InjectedApp.GetAttributedUrl(localhost)" onclick="javascript:alert(InjectedApp.GetAttributedUrl('http://localhost/'));" />
 	<input type="button" data-injectedapp="" value="InjectedApp.GetSupportedCalls()" onclick="javascript:alert(InjectedApp.GetSupportedCalls());" />
 
-	<a href="complete.jpg" download="complete.jpg"><button>Скачать картинку</button></a>
+	  <h2>In Download Picture</h2>
+	 <button id="downloadButton">Скачать картинку</button>
+	  <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            var link = document.createElement('a');
+            link.href = 'complete.jpg'; // Замените на фактический URL вашей картинки
+            link.download = 'complete.jpg'; // Укажите желаемое имя файла
+            link.click();
+        });
+    </script>
 	<h2>HTML Tests</h2>
 	<input type="file" name="myfile" multiple required>
 	<audio controls>
