@@ -1,9 +1,5 @@
-//[{
-  //"relation": ["delegate_permission/common.handle_all_urls"],
-  //"target": {
-   // "namespace": "android_app",
-    //"package_name": "com.test.owtwamain",
-    //"sha256_cert_fingerprints":
-  //  ["8D:15:9E:A3:7C:C5:B0:CF:9B:6C:B8:C2:F1:BA:FB:35:61:6E:FB:DD:0B:85:42:B5:35:0D:98:1A:0B:29:B2:1E"]
-//  }
-//}]
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.twaandroid.sdk",
+               "sha256_cert_fingerprints": ["81:79:E6:04:47:10:96:CF:C2:0B:E3:12:B6:21:53:E5:C7:73:B3:A7:A3:7E:24:C8:F6:E5:7A:DB:AB:0E:A4:58"] }
+}]
