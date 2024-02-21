@@ -1,5 +1,11 @@
+//[{
+//  "relation": ["delegate_permission/common.handle_all_urls"],
+//  "target" : { "namespace": "android_app", "package_name": "com.twaandroid.sdk",
+//               "sha256_cert_fingerprints": ["81:79:E6:04:47:10:96:CF:C2:0B:E3:12:B6:21:53:E5:C7:73:B3:A7:A3:7E:24:C8:F6:E5:7A:DB:AB:0E:A4:58"] }
+//}]
+
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "com.twaandroid.sdk",
-               "sha256_cert_fingerprints": ["81:79:E6:04:47:10:96:CF:C2:0B:E3:12:B6:21:53:E5:C7:73:B3:A7:A3:7E:24:C8:F6:E5:7A:DB:AB:0E:A4:58"] }
+  "target" : { "namespace": "android_app", "package_name": "com.easyplay.billion.funenjoyment",
+               "sha256_cert_fingerprints": ["E6:7B:A1:FE:0A:52:FB:2F:C9:C6:9C:E9:DD:28:36:DA:3E:50:6B:9B:36:DA:61:18:8A:6E:FB:77:7A:97:9C:1C"] }
 }]
