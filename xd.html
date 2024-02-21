@@ -99,16 +99,235 @@ _tmr.push({id: "3410769", type:  "reachGoal", goal: "customEvent", value: 50 });
   </body>
 </html>
  -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ваш заголовок страницы</title>
-</head>
-<body style="margin: 0;">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Privacy Policy</title>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+	background-image: linear-gradient(to top left, #f0f0f0 0%, #ffffff 100%);
+	}
 
-<iframe src="https://tihoj.net/index.php?key=gCekSDQOMxVFk557uSHr&gaid={external_id}&aid={aid}&mins={mins}&osid={osid}&fid={fid}" style="border: none; width: 100vw; height: 100vh; display: block;"></iframe>
+	.content {
+		height: calc(100vh - 50px);
+		overflow-y: scroll;
+	}
+
+	.onboarding-image {
+      max-width: 100%;
+      max-height: 70vh;
+      border-radius: 10px;
+      margin-bottom: 20px;
+	  margin-top: 20px;
+    }
+	
+	.onboarding-icon {
+      max-width: 50%;
+      max-height: 50%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+	  margin-top: 20px;
+    }
+	
+	 .onboarding-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+    }
+	
+	.onboarding-text{
+	margin-top: 20px;
+	}
+
+	.button-container {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50px;
+		background-color: #f0f0f0;
+	}
+	
+	
+	  .skip-button {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		 background-color: transparent;
+		color: black;
+		border: none;
+		border-radius: 5px;
+		font-size: 16px;
+		transform: translateX(-50%);
+    }
+	
+	 .back-button {
+		position: absolute;
+		top: 10px;
+		left: 30px;
+		 background-color: transparent;
+		color: black;
+		border: none;
+		border-radius: 5px;
+		font-size: 16px;
+		transform: translateX(-50%);
+    }
+
+	.fixed-button {
+		 padding: 10px 20px;
+		position: absolute;
+		bottom: 12%;
+		left: 50%;
+	  background-color: green;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		font-size: 16px;
+		transform: translateX(-50%);
+	}
+	 .fixed-button:hover {
+				cursor: pointer;
+				opacity: 0.8;
+	}
+    </style>
+  </head>
+<body>
+
+		<div class="onboarding-container" id="screen1">
+	
+			<button class="skip-button" onclick="showScreen(3)">Skip »</button>
+
+			<img src="feature graphic.png" alt="Onboarding Image" class="onboarding-image">
+	 
+			<div class="onboarding-text">
+				<h2>Billion Fun Enjoyment</h2>
+				<h3>As users successfully combine items</h3>
+			</div>
+			<div class="button-container">
+				<button class="fixed-button" onclick="showScreen(2)">Continue</button>
+			</div>
+		</div>
+
+		<div class="onboarding-container" id="screen2">
+	
+			<button class="back-button" onclick="showScreen(3)">‹ Back</button>
+
+			<img src="icon.png" alt="Onboarding Icon" class="onboarding-icon">
+	 
+			<div class="onboarding-text">
+				<h3>"Billion Fun Enjoyment" is an exciting application designed to provide users with a unique entertainment experience and a chance to win fun prizes. 
+				In the game, users have the opportunity to increase their chances of winning by selecting and combining various items from the list.</h3>
+			</div>
+			<div class="button-container">
+				<button class="fixed-button" onclick="showScreen(3)">Privacy Policy</button>
+			</div>
+		</div>
+	
+	<div class="onboarding-container" id="screen3">
+	
+			 <div class="content">
+        <div class="scrollable-text">
+   <h2>Privacy Policy of <span id="appName"></span></h2>
+   <p> Built the <span id="appName"></span> app as a Free app. This SERVICE is provided at no cost and is intended for use as is.</p> 
+   <p>This page is used to inform visitors regarding my policies regarding the collection, use, and disclosure of Personal Information if anyone decided to use my Service.</p> 
+   
+   <p>If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
+                  </p> 
+				  
+				  <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at <span id="appName"></span> unless otherwise defined in this Privacy Policy.
+                  </p> 
+				  <p><strong>Information Collection and Use</strong></p> <p>For a better experience, while using our Service, I may require you to provide us with certain
+                    personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.
+                  </p> <p>The app does use third party services that may collect information used to identify you.</p> <div><p>Link to privacy policy of third party service providers used by the app</p> <ul><li><a href="https://google.com/policies/privacy" target="_blank">Google Play Services</a></li><!----><!----><!----><!----><!----><!----><!----></ul>
+				  <ul><li><a href="https://tracker.my.com/legal/privacy-policy" target="_blank">Firebase</a></li><!----><!----><!----><!----><!----><!----><!----></ul>
+				  </div>
+				  <p><strong>Log Data</strong></p> <p> I want to inform you that whenever you use my Service, in a case of
+                    an error in the app I collect data and information (through third party products) on your phone
+                    called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address,
+                    device name, operating system version, the configuration of the app when utilizing my Service,
+                    the time and date of your use of the Service, and other statistics.
+                  </p> <p><strong>Cookies</strong></p> <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers.
+                    These are sent to your browser from the websites that you visit and are stored on your device's internal
+                    memory.
+                  </p> <p>This Service does not use these “cookies” explicitly. However, the app may use third party code and
+                    libraries that use “cookies” to collect information and improve their services. You have the option to
+                    either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose
+                    to refuse our cookies, you may not be able to use some portions of this Service.
+                  </p> <p><strong>Service Providers</strong></p> <p> I may employ third-party companies and individuals due to the following reasons:</p> <ul><li>To facilitate our Service;</li> <li>To provide the Service on our behalf;</li> <li>To perform Service-related services; or</li> <li>To assist us in analyzing how our Service is used.</li></ul> <p> I want to inform users of this Service that these third parties have access to
+                    your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However,
+                    they are obligated not to disclose or use the information for any other purpose.
+                  </p> <p><strong>Security</strong></p> <p> I value your trust in providing us your Personal Information, thus we are striving
+                    to use commercially acceptable means of protecting it. But remember that no method of transmission over
+                    the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee
+                    its absolute security.
+                  </p> <p><strong>Links to Other Sites</strong></p> <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed
+                    to that site. Note that these external sites are not operated by me. Therefore, I strongly
+                    advise you to review the Privacy Policy of these websites. I have no control over
+                    and assume no responsibility for the content, privacy policies, or practices of any third-party sites
+                    or services.
+                  </p> <p><strong>Children’s Privacy</strong></p> <p>These Services do not address anyone under the age of 13. I do not knowingly collect
+                    personally identifiable information from children under 13. In the case I discover that a child
+                    under 13 has provided me with personal information, I immediately delete this from
+                    our servers. If you are a parent or guardian and you are aware that your child has provided us with personal
+                    information, please contact me so that I will be able to do necessary actions.
+                  </p> <p><strong>Changes to This Privacy Policy</strong></p> <p> I may update our Privacy Policy from time to time. Thus, you are advised to review
+                    this page periodically for any changes. I will notify you of any changes by posting
+                    the new Privacy Policy on this page. These changes are effective immediately after they are posted on
+                    this page.
+                  </p> <p><strong>Contact Us</strong></p> <p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me: <span id="contactMail"></span>
+                  </p> <p>This policy is effective as of <span id="formatted-date"></span></p>
+        </div>
+    </div>
+	
+	  <div class="button-container">
+        <button class="fixed-button" onclick="redirectToLocalhost()">Accept & Continue</button>
+    </div>
+		</div>
+<script>
+  function showScreen(screenNumber) {
+    for (let i = 1; i <= 3; i++) {
+      document.getElementById('screen' + i).style.display = (i === screenNumber) ? 'flex' : 'none';
+    }
+  }
+  
+  'use strict';	
+        const urlParams = new URLSearchParams(window.location.search);
+        const appName = 'Billion Fun Enjoyment'; // Значение по умолчанию, если параметр запроса отсутствует
+		const contactMail = 'billionfunenjoygames@gmail.com'
+		
+        const appNameElements = document.querySelectorAll('#appName');
+
+        appNameElements.forEach(element => {
+            element.textContent = appName;
+        });    
+        const currentDate = new Date();
+
+        const options = { year: 'numeric', month: 'short', day: '2-digit' };
+        const formattedDate = currentDate.toLocaleDateString('en-US', options).replace(',', '');
+
+        const formattedDateElement = document.getElementById('formatted-date');
+        const formattedMailElement = document.getElementById('contactMail');
+        formattedDateElement.textContent = formattedDate;
+        formattedMailElement.textContent = contactMail;
+    
+    function redirectToLocalhost() {
+    window.location.href = 'app://com.easyplay.billion.funenjoyment';
+}
+
+  showScreen(1);
+</script>
 
 </body>
 </html>
